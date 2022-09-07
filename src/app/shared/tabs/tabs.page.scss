@@ -1,0 +1,38 @@
+ion-tab-bar {
+    bottom: 20px;
+    position: relative;
+    border-radius: 16px;
+    width: 92%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 60px;
+    box-shadow: 0 0 40px 0 rgb(0 0 0 / 10%);
+    background-color: #fff;
+    --background : #fff;
+  }
+  
+  ion-tab-button {
+    --color: var(--ion-color-medium);
+    --color-selected: var(--ion-color-primary);
+    // color: linear-gradient(to left, #fda454, #ff2164 2%);
+    &::before {
+      background-color: transparent;
+      display: block;
+      content: "";
+      margin: 0 auto;
+      width: 20px;
+      height: 2px;
+    }
+  
+    // &.tab-selected::before {
+    //   background-color: var(--ion-color-primary);
+    // }
+  }
+  img{
+    width: 31px;
+    height: 23px;
+  }
+
+#background-content{
+  background-color: #eee;
+}

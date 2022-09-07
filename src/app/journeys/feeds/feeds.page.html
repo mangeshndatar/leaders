@@ -1,0 +1,152 @@
+<ion-menu side="start" content-id="main-content">
+  <ion-header>
+    <ion-toolbar translucent>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="mail" slot="start"></ion-icon>
+        <ion-label>Inbox</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="paper-plane" slot="start"></ion-icon>
+        <ion-label>Outbox</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="heart" slot="start"></ion-icon>
+        <ion-label>Favorites</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="archive" slot="start"></ion-icon>
+        <ion-label>Archived</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="trash" slot="start"></ion-icon>
+        <ion-label>Trash</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="warning" slot="start"></ion-icon>
+        <ion-label>Spam</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-content color="light">
+    <div class="container">
+      <div class="header-container">
+        <div class="header">
+        <div><img src="/assets/icon/toggle-menu.svg" alt="" class="toggle-menu"></div>
+        <div class="title">Feed</div>
+        <div><img src="/assets/icon/notification.svg" alt="" class="notifications"></div>
+      </div>
+    </div>
+    <div class="slider">
+      <ion-slides  (ionSlideWillChange)="onSlideWillChange()" (ionSlideDidChange)="onSlideDidChange()">
+        <ion-slide>
+         
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6" class="left-banner">
+                <div class="date fb">DEC 22</div>
+                <h1 class="fb">Live Event</h1>
+                <h4 class="fm">Come join us for 
+                  the future plans</h4>
+                <h5 class="place fm">Pune,  MH</h5>
+              </ion-col>
+              <ion-col size="6">
+                <img src="/assets/images/card-image.png" class="card-image" alt="">
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+       
+        </ion-slide>
+        <ion-slide>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6" class="left-banner">
+                <div class="date">DEC 22</div>
+                <h1 class="black-text mt-0">Live Event</h1>
+                <h4 class="black-text mt-0">Come join us for 
+                  the future plans</h4>
+                <h5 class=" mt-0 place black-text ">Pune,  MH</h5>
+              </ion-col>
+              <ion-col size="6">
+                <img src="/assets/images/card-image.png" class="card-image" alt="">
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-slide>
+        <ion-slide>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6" class="left-banner">
+                <div class="date">DEC 22</div>
+                <h1>Live Event</h1>
+                <h4>Come join us for 
+                  the future plans</h4>
+                <h5 class="place">Pune,  MH</h5>
+              </ion-col>
+              <ion-col size="6">
+                <img src="/assets/images/card-image.png" class="card-image" alt="">
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-slide>
+        <ion-slide>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6" class="left-banner">
+                <div class="date">DEC 22</div>
+                <h1>Live Event</h1>
+                <h4>Come join us for 
+                  the future plans</h4>
+                <h5 class="place">Pune,  MH</h5>
+              </ion-col>
+              <ion-col size="6">
+                <img src="/assets/images/card-image.png" class="card-image" alt="">
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-slide>
+        <ion-slide>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6" class="left-banner">
+                <div class="date">DEC 22</div>
+                <h1>Live Event</h1>
+                <h4>Come join us for 
+                  the future plans</h4>
+                <h5 class="place">Pune,  MH</h5>
+              </ion-col>
+              <ion-col size="6">
+                <img src="/assets/images/card-image.png" class="card-image" alt="">
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div class="upcoming-event">
+      <div class="button"></div>
+      <h1 class="upcoming-event-title">Upcoming events</h1>
+      <div class="upcoming-event-banner">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+            <ion-card-title>Card Title</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Keep close to Nature's heart... and break clear away, once in awhile,
+            and climb a mountain or spend a week in the woods. Wash your spirit clean.
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+    </div>
+    </ion-content>
+</div>

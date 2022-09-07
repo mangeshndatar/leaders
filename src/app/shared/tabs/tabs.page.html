@@ -1,0 +1,10 @@
+
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button *ngFor="let tab of tabs;let i=index; " [tab]="tab.tabName" layout="icon-top" (click)="navigate(i)">
+      <img [src]="tab.image" alt="">
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>
