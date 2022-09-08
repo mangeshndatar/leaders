@@ -11,7 +11,13 @@ export class FeedsPage implements OnInit {
 
   ngOnInit() {
   }
-
+  option = {
+    slidesPerView: 3,
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 10,
+    autoplay:true,
+  }
   onSlideWillChange(){
     console.log("slide will change")
   }
