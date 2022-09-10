@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-feeds',
@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feeds.page.scss'],
 })
 export class FeedsPage implements OnInit {
-
-  constructor() { }
+  @ViewChild("header") header: HTMLElement;
+  constructor( public element: ElementRef, 
+    public renderer: Renderer2) { }
 
   ngOnInit() {
   }
@@ -18,11 +19,24 @@ export class FeedsPage implements OnInit {
     spaceBetween: 10,
     autoplay:false,
   }
-  onSlideWillChange(){
-    console.log("slide will change")
+
+  trendingSlider = {
+    slidesPerView: 1.3,
+    centeredSlides: true,
+    loop: false,
+    spaceBetween: 10,
+    autoplay:false, 
+  }
+  ionViewWillEnter() {
+    this.renderer.setStyle(this.header['el'], 'webkitTransition', 'top 700ms');
   }
 
-  onSlideDidChange() {
-    console.log("slide did change")
+  onContentScroll(event) {
+    // console.log(event);
+    // if (event.detail.scrollTop >= 50) {
+    //   this.renderer.setStyle(this.header['el'], 'top', '-76px');
+    // } else {
+    //   this.renderer.setStyle(this.header['el'], 'top', '20px');
+    // }
   }
 }
