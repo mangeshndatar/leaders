@@ -35,9 +35,9 @@
 </ion-menu>
 
 <div class="ion-page" id="main-content">
-  <ion-content color="light">
+  <ion-content color="light"  scrollEvents="true" (ionScroll)='onContentScroll($event)'>
     <div class="container">
-      <div class="header-container">
+      <div class="header-container" #header>
         <div class="header">
         <div><img src="/assets/icon/toggle-menu.svg" alt="" class="toggle-menu"></div>
         <div class="title">Feed</div>
@@ -45,17 +45,17 @@
       </div>
     </div>
     <div class="slider">
-      <ion-slides  (ionSlideWillChange)="onSlideWillChange()" (ionSlideDidChange)="onSlideDidChange()">
+      <ion-slides [options]="option">
         <ion-slide>
          
           <ion-grid>
             <ion-row>
               <ion-col size="6" class="left-banner">
                 <div class="date fb">DEC 22</div>
-                <h1 class="fb">Live Event</h1>
-                <h4 class="fm">Come join us for 
+                <h1 class="fb text-black card-header">Live Event</h1>
+                <h4 class="fm text-light-black card-text">Come join us for 
                   the future plans</h4>
-                <h5 class="place fm">Pune,  MH</h5>
+                <h5 class="place fm text-grey-light">Pune,  MH</h5>
               </ion-col>
               <ion-col size="6">
                 <img src="/assets/images/card-image.png" class="card-image" alt="">
@@ -65,68 +65,58 @@
        
         </ion-slide>
         <ion-slide>
+         
           <ion-grid>
             <ion-row>
               <ion-col size="6" class="left-banner">
-                <div class="date">DEC 22</div>
-                <h1 class="black-text mt-0">Live Event</h1>
-                <h4 class="black-text mt-0">Come join us for 
+                <div class="date fb">DEC 22</div>
+                <h1 class="fb text-black card-header">Live Event</h1>
+                <h4 class="fm text-light-black card-text">Come join us for 
                   the future plans</h4>
-                <h5 class=" mt-0 place black-text ">Pune,  MH</h5>
+                <h5 class="place fm text-grey-light">Pune,  MH</h5>
               </ion-col>
               <ion-col size="6">
                 <img src="/assets/images/card-image.png" class="card-image" alt="">
               </ion-col>
             </ion-row>
           </ion-grid>
+       
         </ion-slide>
         <ion-slide>
+         
           <ion-grid>
             <ion-row>
               <ion-col size="6" class="left-banner">
-                <div class="date">DEC 22</div>
-                <h1>Live Event</h1>
-                <h4>Come join us for 
+                <div class="date fb">DEC 22</div>
+                <h1 class="fb text-black card-header">Live Event</h1>
+                <h4 class="fm text-light-black card-text">Come join us for 
                   the future plans</h4>
-                <h5 class="place">Pune,  MH</h5>
+                <h5 class="place fm text-grey-light">Pune,  MH</h5>
               </ion-col>
               <ion-col size="6">
                 <img src="/assets/images/card-image.png" class="card-image" alt="">
               </ion-col>
             </ion-row>
           </ion-grid>
+       
         </ion-slide>
         <ion-slide>
+         
           <ion-grid>
             <ion-row>
               <ion-col size="6" class="left-banner">
-                <div class="date">DEC 22</div>
-                <h1>Live Event</h1>
-                <h4>Come join us for 
+                <div class="date fb">DEC 22</div>
+                <h1 class="fb text-black card-header">Live Event</h1>
+                <h4 class="fm text-light-black card-text">Come join us for 
                   the future plans</h4>
-                <h5 class="place">Pune,  MH</h5>
+                <h5 class="place fm text-grey-light">Pune,  MH</h5>
               </ion-col>
               <ion-col size="6">
                 <img src="/assets/images/card-image.png" class="card-image" alt="">
               </ion-col>
             </ion-row>
           </ion-grid>
-        </ion-slide>
-        <ion-slide>
-          <ion-grid>
-            <ion-row>
-              <ion-col size="6" class="left-banner">
-                <div class="date">DEC 22</div>
-                <h1>Live Event</h1>
-                <h4>Come join us for 
-                  the future plans</h4>
-                <h5 class="place">Pune,  MH</h5>
-              </ion-col>
-              <ion-col size="6">
-                <img src="/assets/images/card-image.png" class="card-image" alt="">
-              </ion-col>
-            </ion-row>
-          </ion-grid>
+       
         </ion-slide>
       </ion-slides>
     </div>
@@ -135,21 +125,26 @@
       <h1 class="upcoming-event-title">Upcoming events</h1>
       <div class="upcoming-event-banner">
         <ion-card>
-          <ion-card-header>
+          <ion-card-header class="event-card">
             <ion-card-title>
               <img src="../../../assets/images/bjp-logo.png" alt="" srcset="">
               <h3>Modi holds roadshow in gujarat for first time </h3>         
             </ion-card-title>
             <!-- <ion-card-subtitle><p>Gandhinagar, Gujarat</p></ion-card-subtitle> -->
           </ion-card-header>
+
+            <h5 class="place fm text-grey-light event-card-place"> <span>Gandhinagar, Gujarat</span> </h5>
           <ion-card-content>
             <div class="join-event">
                 <div class="img-group">
-                  <img src=".../../../../../assets/images/imggrp.jpg" alt="" srcset="">
+                
+                  <img  src=".../../../../../assets/images/person1.png" alt="" srcset="">
+                  <img class="second-img" src=".../../../../../assets/images/person2.png" alt="" srcset="">
+                
                   <h2>+9K</h2>
                 </div>
                 <div class="share">
-                  <img src="../../../assets/images/share.png" alt="" srcset="">
+                  <img src="../../../assets/images/share-black.png" alt="" srcset="">
                   <a href="#" target="_blank" rel="noopener noreferrer">JOIN</a>
                 </div>
             </div>
@@ -159,8 +154,8 @@
     </div>
 
     <div class="trending ">
-      <h3>TRENDING</h3>
-      <ion-slides [options]="option">
+      <h3 class="trending-header">TRENDING</h3>
+      <ion-slides [options]="trendingSlider">
         <ion-slide>
           <div class="slide">
             <ion-card>
@@ -212,8 +207,13 @@
         <ion-card>
           <ion-card-header>
             <div class="post-header">
-              <img src="../../../assets/images/imggrp.jpg" alt="" srcset="">
+              <div>
+              <img src="../../../assets/images/post-user-logo.png" class="post-logo" alt="" srcset="">
+            </div>
+            <div>
               <h2>Amol Balwadkar</h2>
+              <div>3hr</div>
+            </div>
               
             </div>
          
@@ -222,9 +222,10 @@
           <ion-card-content>
             अखंड हिंदुस्थान चे आराध्य दैवत व स्फूर्ती स्थान,श्रीमंत छत्रपती शिवाजी राजे महाराजांना,त्रिवार मानाचा मुजरा…सर्व शिवभक्तांना, शिवजयंतीच्या शिवमय शुभेच्छा…!!
           </ion-card-content>
-          <img src="../../../assets/images/demopost.jpg" />
+          <img src="../../../assets/images/post-photo.png" class="post-image"/>
+          
         </ion-card>
-
+        <div class="views-container"> <b>83,230</b> <span>Views</span></div>
       </div>
     <!-- Post Section End -->
 

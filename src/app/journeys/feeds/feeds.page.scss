@@ -3,7 +3,7 @@
   }
   ion-content {
     --background-color: #333;
-    --ion-color-base : #eee;
+    --ion-color-base : #eee !important;
   }
   ion-title{
   text-align: start;
@@ -16,7 +16,7 @@
   }
   .container{
     height: 600px;
-  margin: 0 0 3260px;
+  // margin: 0 0 60px;
  
   object-fit: contain;
   background: linear-gradient(90deg, rgba(255,33,100,1) 40%, rgba(253,164,84,1) 120%);
@@ -30,6 +30,7 @@
     position: fixed;
     padding: 20px 40px;
     width: 100%;
+    z-index: 90;
   }
   .header{
     display: flex;
@@ -54,30 +55,30 @@
     margin-top: 4px;
 }
 .slider{
-  padding-top: 50px;
+  // padding-top: 80px;
 }
 ion-slides {
   --bullet-background: #eee;
   --bullet-background-active: #000;
 
   ion-slide {
-    margin: 50px;
-    height: 23vh ;
-    width: 94% !important;
-    margin-left: -8%;
+    // margin: 50px;
+    height: 220px ;
+    // width: 99% !important;
+    // margin-left: -8%;
     object-fit: contain;
     border-radius: 20px;
     background-color: #fff;
+    margin-top: 113px;
     &:nth-child(1) {
-      width: 90% !important;
-      margin-left: 3%;
+      //  margin-left: -26px;
     }
 
     &:nth-child(2) {
       // background-color: lightgreen;
     }
 
-    &:nth-child(3) {
+    &:last-child {
       // background-color: lightblue;
     }
   }
@@ -93,7 +94,7 @@ ion-grid{
   width: 106px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -122,13 +123,24 @@ ion-col{
   line-height: normal;
   letter-spacing: normal;
   color: #858585;
+  font-family: 'Montserrat-Medium';
+  font-size: 15px;
 }
 .card-image{
-  height: 255px;
+  height: 265px;
     width: 211px;
     /* margin-bottom: -23px; */
     position: relative;
     bottom: 45px;
+}
+.card-text{
+  margin: 5px 0px;
+  font-size: 14px;
+  font-family: 'Montserrat-Medium';
+}
+.card-header{
+  margin-top: 32px !important;
+  font-size: 21px;
 }
 .upcoming-event{
   background-color: #fff;
@@ -136,6 +148,10 @@ ion-col{
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   padding: 20px;
+  margin-top: 80px;
+  font-size: 18px;
+  font-family: 'Montserrat-Bold';
+  text-transform: uppercase;
 }
 .button{
   border-radius: 5px;
@@ -145,13 +161,15 @@ ion-col{
   width: 35px;
 }
 .upcoming-event-title{
-  font-size: 34px;
+  font-size: 18px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: 0.5px;
   color: #333;
+  font-family: 'Montserrat-Bold';
+
 }
 .upcoming-event-banner{
   display: flex;
@@ -170,6 +188,10 @@ ion-col{
 .black-text{
   --color: black;
 }
+.upcoming-event-second-person{
+  position: relative;
+  right: 20px;
+}
 ion-card{
 
 
@@ -184,21 +206,33 @@ ion-card{
     
       
       h3{
+        text-transform: none;
         font-weight: 600;
         margin-left: 10px;
-    
+        font-family: 'Montserrat-SemiBold';
+        font-size: 15px;
+        color: black;
       }
       img{
-        width: 19%;
+        width: 40px;
         height: auto;
-    }
+        padding-top: 8px;
+        border-radius: 50%;
+      }
   }
   ion-card-subtitle{
     p{
       
     }
   }
-
+.event-card-place{
+  margin-left: 64px !important;
+  margin: 0px;
+  text-transform: capitalize;
+}
+.event-card{
+  padding: 0px 17px;
+}
   ion-card-content{
     .join-event{
       
@@ -211,16 +245,20 @@ ion-card{
       flex-direction: row;
       place-items: center;
         img{
-          width: 26%;
+          width: 30px;
           margin-right: 10px;
           margin-left: 10px;
           border-radius: 20px;
       
         }
+        .second-img{
+          margin-left: -22px;
+        }
         h2{
           font-weight: 600;
           font-size: 20px;
           color:black;
+          font-family: 'Montserrat-Bold';
         }
       }
 
@@ -241,9 +279,11 @@ ion-card{
           background-image: linear-gradient(to right, #e91e63, #ffff00ad);
           color: white;
           text-decoration: none;
-          padding: 10px 40px 10px 40px;
+          padding: 6px 32px 7px 32px;
           border-radius: 20px;
-
+          letter-spacing: 0.8px;
+          font-family: 'Montserrat-Bold';
+          height: 33px;
         }
       }
     }
@@ -258,9 +298,18 @@ ion-card{
 }
 
  //Trending start
+ .trending-header{
+  font-family: 'Montserrat-Bold';
+  /* margin-top: 10px; */
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 20px;
+  color: black;
+}
  .trending{
-  margin-top: 20% !important;
-
+  margin-top: 5% !important;
+  background: white;
+  
   ion-slides{
  
      ion-slide{
@@ -268,25 +317,27 @@ ion-card{
       background-color: rgba(0, 0, 0, 0);
       background-color: none;
       margin: 0px !important;
-      width: 70% !important;
-
-      &:first-child{
-        width: 70% !important;
-      }
+      
+   
    
   
       ion-card{
         box-shadow: none;
+        border: 1px solid #eee;
         img{
           width: 270px;
         }
         ion-card-title{
-          font-size: 20px;
+          font-size: 14px;
+          font-family: 'Montserrat-Bold';
           font-weight: 600;
+          color: black;
         }
         ion-card-subtitle{
           text-align: left;
-          font-size: 17px;
+          font-family: 'Montserrat-Medium';
+          font-size: 12px;
+          color: black;
         }
         a{
           background-color: #e91e63;
@@ -296,14 +347,16 @@ ion-card{
           padding: 10px 30px 10px 30px;
           border-radius: 20px;
           position: absolute;
-          margin-top: -39px;
+          margin-top: -41px;
+    /* margin-right: -10px; */
+          right: 12px;
 
         }
         ion-card-header{
     
-          border-bottom: 1px solid grey;
-          border-left:  1px solid grey;
-          border-right:  1px solid grey;
+          // border-bottom: 1px solid grey;
+          // border-left:  1px solid grey;
+          // border-right:  1px solid grey;
 
         }
       }
@@ -316,7 +369,15 @@ ion-card{
 
 
 //post start
+.post-logo{
+  width: 54px !important;
+  height: 44px;
+}
+.post-image{
+  width: 100%;
+}
 .post{
+  background: white;
   .post-header{
         align-items: center;
         display: flex;
@@ -328,11 +389,15 @@ ion-card{
       width: 10%;
       border-radius: 100%;
       margin-right: 10px;
+      padding-right: 10px;
     }
     h2{
-      font-size: 20px;
-      font-weight:600;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 0px;
+      margin-bottom: 1px;
       color: #000;
+      font-family: 'Montserrat-SemiBold';
     }
    
   }
@@ -341,11 +406,10 @@ ion-card{
     background-color: transparent;
     box-shadow: none;
     width: 100%;
-   
-      img:nth-last-child(1){
-        width: 100% !important;
-      }
-
+    margin: 0px;
+    margin-top: 20px;
+    border-radius: 0px;
+    
       ion-card-content{
         
           font-size: 16px;
@@ -356,7 +420,39 @@ ion-card{
   }
 
 }
+
+.views-container{
+  background: white;
+  padding-bottom: 100px;
+  padding-top: 14px;
+  b{
+    color: #333;
+    font-family: 'Montserrat-Bold';
+    font-size: 18px;
+    letter-spacing: .38px;
+    margin-left: 12px;
+    padding-right: 10px;
+  }
+  span{
+    color: #858585;
+    font-family: 'Montserrat-SemiBold';
+    font-size: 18px;
+  }
+}
 //post end
 .mt-0{
   margin-top: 0px;
+}
+
+.text-black{
+  color: #000;
+}
+.text-light-black{
+  color: #020202;
+}
+.text-grey-light{
+  color: #858585;
+}
+.m0{
+  margin: 0 !important;
 }
