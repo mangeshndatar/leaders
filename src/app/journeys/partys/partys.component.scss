@@ -153,38 +153,7 @@ ion-col{
   font-family: 'Montserrat-Bold';
   text-transform: uppercase;
 }
-.states-grid{
-    background-color: #fff;
-    height: 480px;
-    padding: 20px;
-    margin-top: 10px;
-   
-    font-family: 'Montserrat-Bold';
-    text-transform: uppercase;
 
-    h4{
-        font-size: 17px;
-    }
-  }
-.leader-grid{
-    background-color: #fff;
-    height: 540px; 
-    padding: 20px;
-    margin-top: 10px;
-    font-size: 17px;
-    font-family: 'Montserrat-Bold';
-    // text-transform: uppercase;
-
-    p{
-        margin: 0 0;
-        font-size: 16px;
-        font-weight: 500;
-    }
-    h4{
-        font-size: 16px;
-        font-weight: 900 !important;
-    }
-  }
 .party{
     display: flex;
     flex-direction: column;
@@ -202,7 +171,7 @@ ion-col{
   width: 35px;
 }
 .upcoming-event-title{
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -210,20 +179,8 @@ ion-col{
   letter-spacing: 0.5px;
   color: #333;
   font-family: 'Montserrat-Bold';
-  
+
 }
-
-.fav-title{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-
-    img{
-        width:12%;
-        margin-right: 20px;
-    }
-}
-
 .upcoming-event-banner{
   display: flex;
   align-items: end;

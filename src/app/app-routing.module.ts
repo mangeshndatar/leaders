@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { OnboardingPage } from './journeys/onboarding/onboarding.page';
+import { PartysComponent } from './journeys/partys/partys.component';
 import { SplashComponent } from './splash/splash.component';
 
 const routes: Routes = [
@@ -30,6 +31,13 @@ const routes: Routes = [
     path: 'feeds',
     loadChildren: () => import('./journeys/feeds/feeds.module').then( m => m.FeedsPageModule)
   },
+  
+
+  {
+    path : 'partys',
+    component : PartysComponent
+  },
+
   {
     path : 'splash',
     component : SplashComponent

@@ -11,5 +11,12 @@ export class FavouritesPage implements OnInit {
 
   ngOnInit() {
   }
-
+  onContentScroll(event) {
+    // console.log(event);
+    // if (event.detail.scrollTop >= 50) {
+    //   this.renderer.setStyle(this.header['el'], 'top', '-76px');
+    // } else {
+    //   this.renderer.setStyle(this.header['el'], 'top', '20px');
+    // }
+  }
 }
